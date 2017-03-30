@@ -113,9 +113,13 @@ static int cpmod_cpmod(int fd, pset_t src_pset, pset_t tar_pset, int mask)
     return 0;
 }
 
-static int cpmod_cpmoddir(DIR * dirp)
+static int cpmod_cpmoddir(const char * dirpath, int follow_symlink)
 {
-    
+    DIR * dirp;
+    if (cpmod_exist(dirpath, follow_symlink))
+    {
+
+    }
 }
 
 int main(int argc, const char ** argv)
